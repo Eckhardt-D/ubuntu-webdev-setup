@@ -26,31 +26,31 @@
 
 2. `sudo apt-get install curl build-essential libssl-dev`
 
-3. `curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+3. `curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`\
    `sudo dpkg -i google-chrome-stable_current_amd64.deb`
 
-4. `curl https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash`
+4. `curl https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash`\
    `source ~/.profile`
 
-5. `nvm install node`
-   `nvm install --lts`
+5. `nvm install node`\
+   `nvm install --lts`\
    `nvm use --lts`
 
-6. `sudo apt-get install git-core`
-   `git config --global user.name "Eckhardt-D"`
+6. `sudo apt-get install git-core`\
+   `git config --global user.name "Eckhardt-D"`\
    `git config --global user.email "eckhardt.dreyer@gmail.com"`
 
-7. `ssh-keygen -t rsa -b 4096 -C "eckhardt.dreyer@gmail.com"`
-   `eval "$(ssh-agent -s)"`
+7. `ssh-keygen -t rsa -b 4096 -C "eckhardt.dreyer@gmail.com"`\
+   `eval "$(ssh-agent -s)"`\
    `ssh-add ~/.ssh/id_rsa`
 
 8. `sudo snap install code --classic`
 
 12. `npm i -g lite-server`
 
-13. `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`
-    `sudo apt-get update`
-    `sudo apt-get install -y mongodb`
+13. `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`\
+    `sudo apt-get update`\
+    `sudo apt-get install -y mongodb`\
     `sudo nano /etc/systemd/system/mongodb.service`
 
 
@@ -68,14 +68,14 @@
     [Service]
     User=mongodb
     Group=mongodb
-    ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+    ExecStart=/usr/bin/mongod --quiet --config /etc/mongodb.conf
     # Install tells systemd when the service should be automatically started.
     # `multi-user.target` means the server will be automatically started during boot.
     [Install]
     WantedBy=multi-user.target
     ```
 
-    `systemctl daemon-reload`
+    `systemctl daemon-reload`\
     `sudo systemctl start mongodb`
 
     check if running
@@ -84,5 +84,5 @@
     run mongo on startup
     `sudo systemctl enable mongodb`
 
-    create user (replace <password>)
+    create user
     `mongo -u admin -p <password> --authenticationDatabase admin`

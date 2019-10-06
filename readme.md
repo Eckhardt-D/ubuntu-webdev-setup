@@ -2,26 +2,25 @@
 
 ### Todos
 
-- [ ] Update apt-get
-- [ ] Install curl & other essentials
-- [ ] Install Google Chrome
-- [ ] Download Node Version Manager
-- [ ] Install Node LTS version & Latest
-- [ ] Install Git
-- [ ] Setup Git SSH
-- [ ] Install VScode
-- [ ] VScode theme
-- [ ] VScode settings
-- [ ] VScode extensions
-  - [ ] Live sass compiler
-  - [ ] Prettier
-  - [ ] Vetur
-  - [ ] vscode-icons
-- [ ] Install lite-server
-- [ ] Install MongoDB & run as service
+- [x] Update apt-get
+- [x] Install curl & other essentials
+- [x] Install Google Chrome
+- [x] Download Node Version Manager
+- [x] Install Node LTS version & Latest
+- [x] Install Git
+- [x] Setup Git SSH
+- [x] Install VScode
+- [x] VScode theme
+- [x] VScode settings
+- [x] VScode extensions
+  - [x] Live sass compiler
+  - [x] Prettier
+  - [x] Vetur
+  - [x] vscode-icons
+- [x] Install lite-server
+- [x] Install MongoDB & run as service
 
 ### Commands
-
 
 1. `sudo apt-get update`
 
@@ -50,9 +49,8 @@
 12. `npm i -g lite-server`
 
 13. `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10`
-    ` echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list`
     `sudo apt-get update`
-    `sudo apt-get install -y mongodb-org`
+    `sudo apt-get install -y mongodb`
     `sudo nano /etc/systemd/system/mongodb.service`
 
 
